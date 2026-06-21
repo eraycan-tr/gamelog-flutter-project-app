@@ -19,7 +19,6 @@ class DetailPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // GÜN 4 İSTERİ: Detay sayfasında büyük Image.asset kullanımı
             Container(
               width: double.infinity,
               height: 230,
