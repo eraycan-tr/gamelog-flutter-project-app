@@ -67,7 +67,6 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          // Üst Banner (Yönergede zorunlu tutulan url kuralı)
           Container(
             width: double.infinity,
             height: 0,
@@ -101,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.all(12),
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: 0.55, // Görsellerin sığması için en-boy oranı biraz esnetildi
+                      childAspectRatio: 0.55,
                       crossAxisSpacing: 12,
                       mainAxisSpacing: 12,
                     ),
@@ -131,11 +130,10 @@ class _HomePageState extends State<HomePage> {
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                           elevation: 2,
                           color: Colors.white,
-                          clipBehavior: Clip.antiAlias, // Görselin kenar yuvarlatmalarından taşmasını engeller
+                          clipBehavior: Clip.antiAlias,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              // GÜN 4 İSTERİ: Image.asset ile Yerel Görsel Kullanımı
                               Expanded(
                                 child: Container(
                                   width: double.infinity,
@@ -143,7 +141,6 @@ class _HomePageState extends State<HomePage> {
                                   child: Image.asset(
                                     game.assetPath,
                                     fit: BoxFit.cover,
-                                    // Eğer yüklenirken bir sorun oluşursa hata vermemesi için koruma:
                                     errorBuilder: (context, error, stackTrace) {
                                       return const Icon(Icons.gamepad, size: 50, color: Color(0xFF5A7295));
                                     },
