@@ -14,7 +14,6 @@ class _CartPageState extends State<CartPage> {
 
   @override
   Widget build(BuildContext context) {
-    // Argümanları ilk yüklemede bir kez yakalıyoruz
     if (!isInitialized) {
       addedGames = ModalRoute.of(context)!.settings.arguments as List<Game>;
       isInitialized = true;
@@ -43,10 +42,9 @@ class _CartPageState extends State<CartPage> {
                 return Card(
                   margin: const EdgeInsets.symmetric(vertical: 6),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  clipBehavior: Clip.antiAlias, // Görselin kart köşelerinden taşmasını engeller
+                  clipBehavior: Clip.antiAlias,
                   child: ListTile(
                     contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                    // KÜTÜPHANEMDE OYUNUN FOTOĞRAFINI GÖSTEREN KISIM:
                     leading: Container(
                       width: 50,
                       height: 50,
@@ -57,7 +55,7 @@ class _CartPageState extends State<CartPage> {
                       padding: const EdgeInsets.all(2),
                       child: Image.asset(
                         game.assetPath,
-                        fit: BoxFit.contain, // Fotoğrafı kırpmadan tam boyutuyla sığdırır
+                        fit: BoxFit.contain, 
                         errorBuilder: (context, error, stackTrace) {
                           return const Icon(Icons.gamepad, color: Color(0xFF5A7295));
                         },
@@ -70,12 +68,11 @@ class _CartPageState extends State<CartPage> {
                       children: [
                         Text('${game.price.toStringAsFixed(0)} TL', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF5A7295))),
                         const SizedBox(width: 4),
-                        // Kütüphaneden Silme Butonu
                         IconButton(
                           icon: const Icon(Icons.delete, color: Colors.redAccent),
                           onPressed: () {
                             setState(() {
-                              addedGames.removeAt(index); // Seçilen ürünü listeden siler
+                              addedGames.removeAt(index);
                             });
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(content: Text('${game.title} kütüphaneden kaldırıldı.')),
