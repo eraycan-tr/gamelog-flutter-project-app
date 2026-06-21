@@ -7,7 +7,7 @@ Bu proje, 5 günlük yoğunlaştırılmış Flutter eğitimi kapsamında gelişt
 - **Dart Sürümü:** Dart 3.x (Strict Null Safety)
 
 ## 💻 Çalıştırma Adımları
-1. Projeyi bilgisayarınıza klonlayın: `git clone gamelog-flutter-project-app`
+1. Projeyi bilgisayarınıza klonlayın: `git clone https://github.com/eraycan-tr/gamelog-flutter-project-app`
 2. Bağımlılıkları kontrol edin: `flutter pub get`
 3. Bir emülatör veya fiziksel cihaz bağlayın.
 4. Uygulamayı ayağa kaldırın: `flutter run`
