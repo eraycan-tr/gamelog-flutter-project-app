@@ -15,7 +15,6 @@ class GamerLogApp extends StatelessWidget {
     return MaterialApp(
       title: 'GamerLog App',
       debugShowCheckedModeBanner: false,
-      // Gün 3: İsimlendirilmiş Rota Yönetimi
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
