@@ -4,7 +4,7 @@ class Game {
   final String platform;
   final double price;
   final String description;
-  final String assetPath; // İnternet URL'i yerine lokal dosya yolu
+  final String assetPath;
 
   Game({
     required this.id,
@@ -22,13 +22,11 @@ class Game {
       platform: json['platform'],
       price: (json['price'] as num).toDouble(),
       description: json['description'],
-      assetPath: json['asset_path'], // JSON'dan asset yolunu okuyoruz
+      assetPath: json['asset_path'],
     );
   }
 }
 
-// Gün 4: Yerel Assets Klasöründeki Görsellerle Güncellenmiş Sahte Veri Seti
-// Gün 4: Zenginleştirilmiş ve Tamamen Özgün Oyun Açıklamaları Veri Seti
 final List<Map<String, dynamic>> dummyGamesJson = [
   {
     "id": 1,
